@@ -1,0 +1,100 @@
+.Login {
+  width: 100%;
+  height: 100vh;
+  background: url('../images/loginbg.jpg') center center/cover no-repeat;
+  margin-top: 0;
+  color: #444;
+}
+
+.Login h1 {
+  margin: 0;
+  font-size: 4rem;
+  padding-top: 50px;
+}
+
+.LoginFormContainer {
+  width: 750px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+
+.LoginFormContainer form {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+
+.LoginFormContainer label {
+  display: inline;
+}
+
+.LoginFormContainer input {
+  background: none;
+  border:none;
+  border-bottom: 1px solid #444;
+  outline: none;
+  margin: 25px 0;
+  margin-left: 10px;
+}
+
+.LoginFormContainer input:focus {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.LoginFormContainer input:-webkit-autofill,
+.LoginFormContainer input:-webkit-autofill:hover, 
+.LoginFormContainer input:-webkit-autofill:focus, 
+.LoginFormContainer input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.LoginFormContainer button {
+  display: inline-block;
+  width: 120px;
+  margin: 15px 10px;
+  padding: 0 25px;
+  height: 55px;
+  background: none;
+  border: 2px solid #444;
+  border-radius: 55px;
+}
+
+.LoginFormContainer button:hover {
+  cursor: pointer;
+  color: #888;
+  border: 2px solid #888;
+  transition: ease-in-out .3s;
+}
+
+.LoginFormContainer button:focus {
+  outline: none;
+}
+
+.ButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.GuestSpan, .GuestSpan p {
+  font-size: 1em;
+  display: inline;
+}
+
+.GuestLogin {
+  font-weight: bold;
+  display: inline;
+}
+
+.GuestLogin:hover {
+  cursor: pointer;
+}

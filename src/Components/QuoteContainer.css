@@ -1,0 +1,19 @@
+.QuoteContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 33%;
+  height: 400px;
+}
+
+@media screen and (max-width: 500px) {
+  .QuoteContainer {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vw;
+  }
+}

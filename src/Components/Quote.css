@@ -1,0 +1,92 @@
+.Quote {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 200px;
+
+  color: white;
+}
+
+.MainQuote {
+  font-size: 1.75em;
+}
+
+.ByQuote {
+  font-size: 1.5em;
+}
+
+.FavoriteHeart {
+  font-size: 2em;
+}
+
+.QuoteBtn {
+  display: inline-block;
+
+  width: 200px;
+  height: 50px;
+  background: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 100px;
+  font-size: 1.25em;
+  margin-top: 100px;
+}
+
+.QuoteBtn:hover {
+  color: #444;
+  border: 2px solid #444;
+  transition: ease-in-out .2s;
+  cursor: pointer;
+}
+
+.QuoteBtn:focus {
+  outline: none;
+}
+
+.FavoritesBtn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: none;
+  color: white;
+  font-size: 1.25em;
+  margin-top: 100px;
+  outline: none;
+  border: none;
+}
+
+.FavoritesBtn:hover {
+  color: #444;
+  border: none;
+  transition: ease-in-out .2s;
+  cursor: pointer;
+}
+
+.FavoritesBtn:focus {
+  outline: none;
+  border: none;
+  color: orangered;
+}
+
+@media screen and (max-width: 500px) {
+  .Quote {
+    width: 80%;
+    margin: 50px auto;
+    height: 250px;
+    align-items: center;
+    justify-content: flex-start;
+    color: #444;
+
+  }
+  .MainQuote {
+    font-size: 1.5em;
+  }
+  .QuoteBtn {
+    color: #fff;
+    border-color: #fff;
+    margin-top: 300px;
+  }
+  
+}

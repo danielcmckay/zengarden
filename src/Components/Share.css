@@ -1,0 +1,19 @@
+.NotCopied {
+  color: white;
+}
+
+.Copied {
+  color: #444;
+  transition: all ease-in-out 1s;
+
+}
+
+@media screen and (max-width: 500px) {
+  .NotCopied {
+    color: #444;
+
+  }
+  .Copied {
+    color: #999;
+  }
+}
