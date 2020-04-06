@@ -24,7 +24,7 @@ const Favorites = props => {
 
   const populateFavorites = props.favoritesList.map(favorite => {
     return (
-      <li key={favorite.quote}>
+      <li key={favorite.id}>
         {favorite.quote} – {favorite.name}{" "}
        <Share quote={favorite.quote} name={favorite.name} copy={copyClickHandler}/>
         {' '}

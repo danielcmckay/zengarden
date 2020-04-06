@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useTransition, animated, config } from "react-spring";
-import { db } from "../firebase";
 import Share from "./Share";
 
 import "./Quote.css";
@@ -9,6 +8,7 @@ const Quote = (quoteProps) => {
   const [state, setState] = useState({
     quote: "",
     name: "",
+    id: ""
   });
 
   const [show, setShow] = useState(true);
@@ -21,19 +21,23 @@ const Quote = (quoteProps) => {
 
   const getQuoteHandler = () => {
     setShow(false);
-    setTimeout(() => {
-      var docRef = db.collection("quotes");
-      docRef.get().then((querySnapshot) => {
-        const data = querySnapshot.docs.map((doc) => doc.data());
-        const rand = Math.floor(Math.random() * data.length);
-        setState({
-          ...state,
-          quote: data[rand].quote,
-          name: data[rand].name,
-        });
-        setShow(true);
-      }, 10000);
-    });
+    setTimeout(async () => {
+      const response = await fetch("http://localhost:5000/api/quotes", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const json = await response.json();
+      const rand = Math.floor(Math.random() * json.body.length);
+      setState({
+        ...state,
+        quote: json.body[rand].quote,
+        name: json.body[rand].name,
+        id: json.body[rand].id
+      });
+      setShow(true);
+    }, 1000);
   };
 
   useEffect(() => {
