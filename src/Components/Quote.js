@@ -22,7 +22,7 @@ const Quote = (quoteProps) => {
   const getQuoteHandler = () => {
     setShow(false);
     setTimeout(async () => {
-      const response = await fetch("http://localhost:5000/api/quotes", {
+      const response = await fetch("https://zen-quotes-api.herokuapp.com/api/quotes", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
